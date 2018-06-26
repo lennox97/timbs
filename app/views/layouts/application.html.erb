@@ -50,7 +50,7 @@
 
       </ul>
         <% if current_user.admin? %>
-        <%= link_to 'CP', rails_admin_path, class: 'btn btn-outline-danger my-2 my-sm-0', role:'button'%>
+        <%= link_to 'CP', admin_root_path, class: 'btn btn-outline-danger my-2 my-sm-0', role:'button'%>
         <% end %>
         <%= link_to 'Ieşire', destroy_user_session_path, :method => 'delete', class: 'btn btn-outline-success my-2 my-sm-0', role:'button' %>
     </div>
