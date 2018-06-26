@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails_admin', '~> 1.3'
+gem 'administrate'
 gem 'devise'
 gem 'jquery-rails'
 gem 'bootstrap',git: 'https://github.com/twbs/bootstrap-rubygem'

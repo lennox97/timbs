@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { sessions: 'sessions' }
+  namespace :admin do
+    resources :users
+    resources :songs
 
+    root to: "users#index"
+  end
+
+  devise_for :users, :controllers => { sessions: 'sessions', registrations: 'registrations'}
   resources :songs
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to:'songs#index'
 
 
