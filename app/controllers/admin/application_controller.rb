@@ -8,6 +8,7 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_admin
 
+    #the method verify if the user is an admin
     def authenticate_admin
        redirect_to root_path unless current_user.admin==true
     end
